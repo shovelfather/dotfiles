@@ -1,0 +1,13 @@
+[font.normal]
+family = "FiraCode Nerd Font Mono"
+style = "Retina"
+
+[shell]
+args = ["--login"]
+program = "/bin/zsh"
+
+[window]
+opacity = 0.9
+
+[font]
+size = 14.0
