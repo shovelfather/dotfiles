@@ -1,0 +1,46 @@
+# Use powerline
+USE_POWERLINE="true"
+#
+# Source manjaro-zsh-configuration
+if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
+  source /usr/share/zsh/manjaro-zsh-config
+fi
+
+#Setup for starship PS1 prompt fanciness, along with zoxide, for fast
+#directory swapping
+eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
+source ~/.zplug/init.zsh
+
+#God I fucking love vim everything
+#Engage vim mode
+bindkey -v
+zplug "softmoth/zsh-vim-mode"
+zplug load
+
+#Adds an indicator for the specific mode we're in on the vim prompt
+function zle-line-init zle-keymap-select {
+	RPS1="${${KEYMAP/vicmd/}/(main|viins)/}"
+	RPS2=$RPS1
+	zle reset-prompt
+}
+
+zle -N zle-line-init
+zle -N zle-keymap-select
+
+source /usr/share/nvm/init-nvm.sh
+
+#Need this to manage Ruby envs
+eval "$(/home/shovelfather/.rbenv/bin/rbenv init - zsh)"
+
+#aliases
+alias bundleinit="bundle init --gemspec=${HOME}/.bundle/default-gemspec"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+if  { [ -n "$TMUX" ]; } then
+  export FZF_TMUX_OPTS="-d 38%"
+else
+  export FZF_TMUX_OPTS=""
+  export FZF_TMUX=0
+fi
