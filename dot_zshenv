@@ -1,0 +1,11 @@
+. "$HOME/.cargo/env"
+export PATH=$PATH:/home/shovelfather/.local/share/gem/ruby/3.0.0/bin:/home/shovelfather/.local/bin:/home/shovelfather/.pyenv/bin
+export XDG_CONFIG_HOME="${HOME}/.config"
+
+export KEYTIMEOUT=1
+
+export MSF_DATABASE_CONFIG=/opt/metasploit/config/database.yml
+
+export PAGER="/usr/bin/less"
+export EDITOR="/usr/bin/nvim"
+export AWS_PROFILE="default"
