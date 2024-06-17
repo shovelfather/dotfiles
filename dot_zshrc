@@ -28,13 +28,8 @@ function zle-line-init zle-keymap-select {
 zle -N zle-line-init
 zle -N zle-keymap-select
 
-source /usr/share/nvm/init-nvm.sh
-
 #Need this to manage Ruby envs
-eval "$(/home/shovelfather/.rbenv/bin/rbenv init - zsh)"
-
-#aliases
-alias bundleinit="bundle init --gemspec=${HOME}/.bundle/default-gemspec"
+eval "$(${HOME}/.rbenv/bin/rbenv init - zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -44,3 +39,7 @@ else
   export FZF_TMUX_OPTS=""
   export FZF_TMUX=0
 fi
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" ||
+  printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
