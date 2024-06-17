@@ -16,3 +16,5 @@ export GOBIN=/usr/local/go/bin
 export PAGER="/usr/bin/less"
 export EDITOR="/usr/bin/nvim"
 export AWS_PROFILE="default"
+
+export LESS=-R
