@@ -17,3 +17,6 @@ export EDITOR="/usr/bin/nvim"
 export AWS_PROFILE="default"
 
 export LESS=-R
+
+alias lzd="lazydocker"
+alias lzg="lazygit"
