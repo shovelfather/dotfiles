@@ -6,3 +6,12 @@
 -- when trying to type . in ruby files.
 -- https://github.com/nvim-treesitter/nvim-treesitter/issues/2566
 vim.cmd([[autocmd FileType ruby setlocal indentkeys-=.]])
+
+-- This one I need for the docker-compose-language-server. Without it, the LSP
+-- never attaches. Hee Hee.
+vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
+  pattern = "docker-compose.yaml",
+  callback = function()
+    require("lspconfig").docker_compose_language_service.setup({})
+  end,
+})
