@@ -1,11 +1,20 @@
-. "$HOME/.cargo/env"
-export PATH=$PATH:/home/shovelfather/.local/share/gem/ruby/3.0.0/bin:/home/shovelfather/.local/bin:/home/shovelfather/.pyenv/bin
+. "${HOME}/.cargo/env"
+export PATH=$PATH:${HOME}/.local/share/gem/ruby/3.0.0/bin
+export PATH=$PATH:${HOME}/.config/tmux/plugins/t-smart-tmux-session-manager/bin
+export PATH=$PATH:${HOME}/.local/bin
+export PATH=$PATH:${HOME}/.pyenv/bin
+export PATH=${PATH}:/usr/local/go/bin
+
 export XDG_CONFIG_HOME="${HOME}/.config"
 
 export KEYTIMEOUT=1
 
 export MSF_DATABASE_CONFIG=/opt/metasploit/config/database.yml
 
+export GOBIN=/usr/local/go/bin
+
 export PAGER="/usr/bin/less"
 export EDITOR="/usr/bin/nvim"
 export AWS_PROFILE="default"
+
+export LESS=-R
