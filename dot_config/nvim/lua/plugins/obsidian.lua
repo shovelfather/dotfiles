@@ -17,7 +17,7 @@ return {
     workspaces = {
       {
         name = "Brain_Loot",
-        path = "${HOME}/Documents/Obsidian/Brain_Loot",
+        path = "/home/shovelfather/Documents/Obsidian/Brain_Loot",
       },
     },
     note_id_func = function(title)
