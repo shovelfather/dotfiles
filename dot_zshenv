@@ -12,6 +12,8 @@ export MSF_DATABASE_CONFIG=/opt/metasploit/config/database.yml
 
 export GOBIN=${HOME}/.local/bin
 
+export LIBVIRT_DEFAULT_URI=qemu://system
+
 export PAGER="/usr/bin/less"
 export EDITOR="/usr/bin/nvim"
 export AWS_PROFILE="default"
