@@ -3,3 +3,5 @@
 -- Add any additional keymaps here
 
 vim.keymap.set("n", "<leader>fw", "<cmd>!firefox --new-window file:////%:p<CR>")
+vim.keymap.set("n", "d", '"_d')
+vim.keymap.set("v", "d", '"_d')
