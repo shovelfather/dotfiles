@@ -28,3 +28,5 @@ export FZF_DEFAULT_OPTS=" \
 
 alias lzd="lazydocker"
 alias lzg="lazygit"
+
+export LS_COLORS="$(vivid generate catppuccin-macchiato)"
