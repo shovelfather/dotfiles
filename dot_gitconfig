@@ -5,7 +5,7 @@
 	name = Shovelfather
 	email = shovelfather@gmail.com
 [pull]
-	rebase = false
+	rebase = true
 [init]
 	defaultBranch = main
 [color]
