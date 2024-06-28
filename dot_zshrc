@@ -47,3 +47,12 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" ||
 alias k="kubectl"
 alias mk="microk8s kubectl"
 alias trivyscan="docker run -v /var/run/docker.sock:/var/run/docker.sock -v $HOME/Library/Caches:/root/.cache/ aquasec/trivy:0.52.2 image"
+alias ee="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
+
+_fzf_compgen_path() {
+  fd --hidden --exclude .git . "$1"
+}
+
+_fzf_compgen_dir() {
+  fd --type=d --hidden --exclude .git . "$1"
+}
