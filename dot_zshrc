@@ -12,12 +12,6 @@ eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 source ~/.zplug/init.zsh
 
-#God I fucking love vim everything
-#Engage vim mode
-bindkey -v
-zplug "softmoth/zsh-vim-mode"
-zplug load
-
 #Adds an indicator for the specific mode we're in on the vim prompt
 function zle-line-init zle-keymap-select {
 	RPS1="${${KEYMAP/vicmd/}/(main|viins)/}"
@@ -47,7 +41,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" ||
 alias k="kubectl"
 alias mk="microk8s kubectl"
 alias trivyscan="docker run -v /var/run/docker.sock:/var/run/docker.sock -v $HOME/Library/Caches:/root/.cache/ aquasec/trivy:0.52.2 image"
-alias ee="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
+alias ee="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions -G"
 
 _fzf_compgen_path() {
   fd --hidden --exclude .git . "$1"
@@ -63,3 +57,11 @@ setopt share_history
 setopt hist_reduce_blanks
 setopt hist_save_no_dups
 setopt hist_ignore_space
+
+#God I fucking love vim everything
+#Engage vim mode
+bindkey -v
+zplug "softmoth/zsh-vim-mode"
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
+zplug load
+
