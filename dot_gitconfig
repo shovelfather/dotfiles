@@ -11,4 +11,4 @@
 [color]
 	ui = auto
 [core]
-	excludesfile = /home/shovelfather/.gitignore_global
+	excludesfile = /home/thad/.gitignore_global
