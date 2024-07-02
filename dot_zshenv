@@ -38,5 +38,10 @@ alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 alias lzd="lazydocker"
 alias lzg="lazygit"
+alias k="kubectl"
+alias mk="microk8s kubectl"
+alias trivyscan="docker run -v /var/run/docker.sock:/var/run/docker.sock -v $HOME/Library/Caches:/root/.cache/ aquasec/trivy:0.52.2 image"
+alias e="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions -G"
+
 
 export LS_COLORS="$(vivid generate catppuccin-macchiato)"
