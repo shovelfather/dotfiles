@@ -46,8 +46,6 @@ _fzf_compgen_dir() {
   fd --type=d --hidden --exclude .git . "$1"
 }
 
-source /usr/share/fzf/completion.zsh
-
 export HISTFILE="${HOME}/.zsh_history"
 export SAVEHIST=10000
 setopt share_history
@@ -62,3 +60,4 @@ zplug "softmoth/zsh-vim-mode"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug load
 
+source /usr/share/fzf/completion.zsh
