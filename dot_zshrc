@@ -1,6 +1,6 @@
 # Use powerline
 USE_POWERLINE="true"
-#
+
 # Source manjaro-zsh-configuration
 if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
   source /usr/share/zsh/manjaro-zsh-config
@@ -25,8 +25,11 @@ zle -N zle-keymap-select
 #Need this to manage Ruby envs
 eval "$(${HOME}/.rbenv/bin/rbenv init - zsh)"
 
+# Only source fzf completion / shell integration if it exists.
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# Configure fzf to open in a tmux pane if it was called in a tmux session;
+# otherwise, open as normal.
 if  { [ -n "$TMUX" ]; } then
   export FZF_TMUX_OPTS="-d 38%"
 else
@@ -55,4 +58,5 @@ zplug load
 
 source /usr/share/fzf/completion.zsh
 
+# Load atuin shell integration
 eval "$(atuin init zsh)"
