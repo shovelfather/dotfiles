@@ -46,13 +46,6 @@ _fzf_compgen_dir() {
   fd --type=d --hidden --exclude .git . "$1"
 }
 
-export HISTFILE="${HOME}/.zsh_history"
-export SAVEHIST=10000
-setopt share_history
-setopt hist_reduce_blanks
-setopt hist_save_no_dups
-setopt hist_ignore_space
-
 #God I fucking love vim everything
 #Engage vim mode
 bindkey -v
