@@ -5,6 +5,8 @@ export PATH=$PATH:${HOME}/.local/bin
 export PATH=$PATH:${HOME}/.pyenv/bin
 export PATH=${PATH}:${GOBIN}
 
+
+export PATH_TO_FX=${HOME}/.local/lib/javafx-sdk-22.0.2/lib
 export XDG_CONFIG_HOME="${HOME}/.config"
 
 export KEYTIMEOUT=1
