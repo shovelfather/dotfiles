@@ -12,3 +12,5 @@
 	ui = auto
 [core]
 	excludesfile = /home/shovelfather/.gitignore_global
+[credential]
+	helper = libsecret
