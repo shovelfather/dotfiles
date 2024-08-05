@@ -16,8 +16,12 @@ return {
   opts = {
     workspaces = {
       {
-        name = "Brain_Loot",
+        name = "Work",
         path = "/mnt/c/Users/thad.roebuck/Documents/Support",
+      },
+      {
+        name = "Home",
+        path = "/mnt/c/Users/thad.roebuck/Documents/Home",
       },
     },
     note_id_func = function(title)
