@@ -7,6 +7,22 @@ return {
     load = {
       ['core.defaults'] = {},
       ['core.concealer'] = {},
+      ['core.integrations.treesitter'] = {},
+      ['core.integrations.nvim-cmp'] = {},
+      ['core.clipboard'] = {},
+      ['core.clipboard.code-blocks'] = {},
+      ['core.esupports.metagen'] = {
+        config = {
+          author = 'shovelfather',
+          timezone = 'utc',
+          type = 'auto',
+        },
+      },
+      ['core.completion'] = {
+        config = {
+          engine = 'nvim-cmp',
+        },
+      },
       ['core.dirman'] = {
         config = {
           workspaces = {
