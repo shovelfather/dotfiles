@@ -54,6 +54,10 @@ vim.opt.inccommand = 'nosplit'
 -- Show which line your cursor is on
 vim.opt.cursorline = true
 
+-- Set conceal level for fancy plugins like `neorg`, or for Markdown / YAML
+-- parsers.
+vim.opt.conceallevel = 2
+
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
