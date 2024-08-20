@@ -11,6 +11,7 @@ return {
       ['core.integrations.nvim-cmp'] = {},
       ['core.clipboard'] = {},
       ['core.clipboard.code-blocks'] = {},
+      ['core.text-objects'] = {},
       ['core.esupports.metagen'] = {
         config = {
           author = 'shovelfather',
@@ -32,4 +33,9 @@ return {
       },
     },
   },
+  config = function()
+    vim.keymap.set('n', '<k>', '<Plug>(neorg.text-objects.item-up)', {})
+    vim.keymap.set('n', '<j>', '<Plug>(neorg.text-objects.item-down)', {})
+    require('neorg').setup()
+  end,
 }
