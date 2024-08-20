@@ -12,6 +12,7 @@ return {
       ['core.clipboard'] = {},
       ['core.clipboard.code-blocks'] = {},
       ['core.text-objects'] = {},
+      ['core.export'] = {},
       ['core.esupports.metagen'] = {
         config = {
           author = 'shovelfather',
