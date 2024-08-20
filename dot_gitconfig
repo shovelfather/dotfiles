@@ -15,4 +15,4 @@
 [credential]
 	helper = libsecret
 [diff]
-	tool = vimdiff
+	tool = nvimdiff
