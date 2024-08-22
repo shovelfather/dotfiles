@@ -13,6 +13,13 @@ return {
       ['core.clipboard.code-blocks'] = {},
       ['core.text-objects'] = {},
       ['core.export'] = {},
+      ['core.journal'] = {
+        config = {
+          journal_folder = 'journal',
+          strategy = 'flat',
+          workspace = 'notes',
+        },
+      },
       ['core.esupports.metagen'] = {
         config = {
           author = 'shovelfather',
@@ -27,8 +34,9 @@ return {
       },
       ['core.dirman'] = {
         config = {
+          default_workspace = '~/neorg',
           workspaces = {
-            notes = '~/notes',
+            notes = '~/neorg',
           },
         },
       },
