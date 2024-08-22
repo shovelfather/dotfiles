@@ -7,9 +7,6 @@ success_symbol = "[[♥](green) ❯](maroon)"
 error_symbol = "[❯](red)"
 vimcmd_symbol = "[❮](green)"
 
-[python]
-disabled = true
-
 [directory]
 truncation_length = 4
 # Catppuccin 'lavender'
