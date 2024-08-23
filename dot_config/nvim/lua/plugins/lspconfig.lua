@@ -184,7 +184,7 @@ return {
 				-- tsserver = {},
 
 				omnisharp = {
-					cmd = { "dotnet", "~/Scripts/Omnisharp/OmniSharp.Roslyn.dll" },
+					cmd = { "dotnet ~/Scripts/Omnisharp/OmniSharp.Roslyn.dll" },
 					settings = {},
 				},
 
