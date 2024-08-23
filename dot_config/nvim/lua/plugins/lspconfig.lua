@@ -183,11 +183,11 @@ return {
 				-- But for many setups, the LSP (`tsserver`) will work just fine
 				-- tsserver = {},
 
-				omnisharp = {
-					cmd = { "dotnet", "/home/thad/Scripts/Omnisharp/run" },
-					settings = {},
-				},
-
+				-- omnisharp = {
+				-- 	cmd = { "dotnet", "/home/thad/Scripts/Omnisharp/run" },
+				-- 	settings = {},
+				-- },
+				--
 				lua_ls = {
 					-- cmd = {...},
 					-- filetypes = { ...},
