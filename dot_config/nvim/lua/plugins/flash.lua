@@ -1,7 +1,6 @@
 return {
-  "folke/flash.nvim",
-  event = "VeryLazy",
-  ---@type Flash.Config
+  'folke/flash.nvim',
+  event = 'VeryLazy',
   opts = {},
   -- stylua: ignore
   keys = {

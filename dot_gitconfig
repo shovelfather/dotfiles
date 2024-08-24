@@ -5,10 +5,14 @@
 	name = Shovelfather
 	email = shovelfather@gmail.com
 [pull]
-	rebase = true
+	rebase = false
 [init]
 	defaultBranch = main
 [color]
 	ui = auto
 [core]
-	excludesfile = /home/thad/.gitignore_global
+	excludesfile = /home/shovelfather/.gitignore_global
+[credential]
+	helper = libsecret
+[diff]
+	tool = nvimdiff
