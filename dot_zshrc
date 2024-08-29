@@ -1,6 +1,6 @@
 # Use powerline
 USE_POWERLINE="true"
-
+#
 # Source manjaro-zsh-configuration
 if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
   source /usr/share/zsh/manjaro-zsh-config
@@ -46,14 +46,15 @@ _fzf_compgen_dir() {
   fd --type=d --hidden --exclude .git . "$1"
 }
 
+
+[ -f "${HOME}/.fzf.zsh" ] && source "${HOME}/.fzf.zsh"
+
 #God I fucking love vim everything
 #Engage vim mode
 bindkey -v
 zplug "jeffreytse/zsh-vi-mode"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug load
-
-source /usr/share/fzf/completion.zsh
 
 # Load atuin shell integration
 #
@@ -62,8 +63,3 @@ eval "$(atuin init zsh)"
 bindkey '^r' atuin-search-viins
 bindkey '^r' atuin-search-vicmd
 bindkey '^r' atuin-search
-
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
