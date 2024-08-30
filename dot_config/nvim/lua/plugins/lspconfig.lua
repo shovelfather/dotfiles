@@ -93,11 +93,10 @@ return {
               callback = vim.lsp.buf.document_highlight,
             })
 
-            if vim.bo[bufnr].buftype ~= '' or vim.bo[bufnr].filetype == 'helm' then
-              vim.diagnostic.disable(bufnr)
+            if vim.bo[bufnr].filetype == 'helm' then
               vim.defer_fn(function()
-                vim.diagnostic.reset(nil, bufnr)
-              end, 1000)
+                vim.lsp.stop_client(vim.lsp.get_clients { name = 'yamlls' }, true)
+              end, 2000)
             end
 
             vim.api.nvim_create_autocmd({ 'CursorMoved', 'CursorMovedI' }, {
