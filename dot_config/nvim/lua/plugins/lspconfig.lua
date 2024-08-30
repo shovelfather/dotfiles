@@ -93,6 +93,13 @@ return {
               callback = vim.lsp.buf.document_highlight,
             })
 
+            if vim.bo[bufnr].buftype ~= '' or vim.bo[bufnr].filetype == 'helm' then
+              vim.diagnostic.disable(bufnr)
+              vim.defer_fn(function()
+                vim.diagnostic.reset(nil, bufnr)
+              end, 1000)
+            end
+
             vim.api.nvim_create_autocmd({ 'CursorMoved', 'CursorMovedI' }, {
               buffer = event.buf,
               group = highlight_augroup,
