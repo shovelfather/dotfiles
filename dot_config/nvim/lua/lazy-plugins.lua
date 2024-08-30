@@ -27,7 +27,7 @@ require('lazy').setup({
   -- require 'plugins/image',
   require 'plugins/flash',
   require 'plugins/bufferline',
-  -- require 'plugins/vim-helm',
+  require 'plugins/vim-helm',
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
