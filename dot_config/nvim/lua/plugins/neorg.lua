@@ -14,6 +14,7 @@ return {
       ['core.clipboard.code-blocks'] = {},
       ['core.text-objects'] = {},
       ['core.export'] = {},
+      ['core.summary'] = {},
       ['core.journal'] = {
         config = {
           journal_folder = 'journal',
