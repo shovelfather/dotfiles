@@ -19,7 +19,7 @@ return {
         config = {
           journal_folder = 'journal',
           strategy = 'flat',
-          workspace = 'neorg',
+          workspace = 'journal',
         },
       },
       ['core.esupports.metagen'] = {
@@ -39,6 +39,7 @@ return {
           default_workspace = 'neorg',
           workspaces = {
             neorg = '~/neorg',
+            journal = '~/neorg/journal/',
           },
         },
       },
