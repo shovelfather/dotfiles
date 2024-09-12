@@ -21,8 +21,16 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 vim.keymap.set('n', '<Leader>fe', ':Oil<CR>', { desc = 'Open oil file manager' })
 
 -- Neorg specific, these move neorg items up and down.
-vim.keymap.set('n', '<LocalLeader>k', '<Plug>(neorg.text-objects.item-up)', {})
-vim.keymap.set('n', '<LocalLeader>j', '<Plug>(neorg.text-objects.item-down)', {})
+vim.keymap.set('n', '<LocalLeader>k', '<Plug>(neorg.text-objects.item-up)', {
+  desc = 'Move object up',
+})
+vim.keymap.set('n', '<LocalLeader>j', '<Plug>(neorg.text-objects.item-down)', {
+  desc = 'Move Object Down',
+})
+vim.keymap.set('n', '<LocalLeader>w', '<cmd>Neorg workspace neorg<cr>', {
+  noremap = true,
+  desc = 'Open workspace',
+})
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
