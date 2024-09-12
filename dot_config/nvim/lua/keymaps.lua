@@ -39,7 +39,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 -- Lua
-vim.keymap.set('n', '<leader>e', require('substitute').operator, { noremap = true, desc = 'Substitute operator' })
+vim.keymap.set('n', '<leader>e', function()
+  require('substitute').operator { modifiers = { 'reindent' } }
+end, { noremap = true, desc = 'Substitute operator' })
 vim.keymap.set('n', '<leader>ee', require('substitute').line, { noremap = true, desc = 'Substitute line' })
 vim.keymap.set('n', '<leader>E', require('substitute').eol, { noremap = true, desc = 'Substitite eol' })
 vim.keymap.set('x', '<leader>e', require('substitute').visual, { noremap = true, desc = 'Substitute visual' })
