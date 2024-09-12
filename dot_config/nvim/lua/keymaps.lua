@@ -38,4 +38,10 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+-- Lua
+vim.keymap.set('n', '<leader>e', require('substitute').operator, { noremap = true, desc = 'Substitute operator' })
+vim.keymap.set('n', '<leader>ee', require('substitute').line, { noremap = true, desc = 'Substitute line' })
+vim.keymap.set('n', '<leader>E', require('substitute').eol, { noremap = true, desc = 'Substitite eol' })
+vim.keymap.set('x', '<leader>e', require('substitute').visual, { noremap = true, desc = 'Substitute visual' })
+
 -- vim: ts=2 sts=2 sw=2 et
